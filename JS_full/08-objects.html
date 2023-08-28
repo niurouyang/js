@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object</title>
+        <style>
+        </style>
+    </head>
+    <body>
+
+        <script>
+            /*const product ={
+                name: 'socks',
+                price: 1090
+            };
+            console.log(product.name);
+            //add a new property to the product
+            product.newProperty =true;
+            // delete property
+            delete product.newProperty;
+            */
+           const product ={
+            name : 'shirt',
+            'delivery-time' : '1 day',
+            rating:{
+                stars: 4.5,
+                count: 87
+            },
+            fun: function f1(){
+                console.log('Function inside of an Object');
+            }
+           };
+           console.log(product['name']);
+           console.log(product['delivery-time']);
+           product.fun();
+           // stringify method will convert JS object to JSON file
+           console.log(JSON.stringify(product));
+           // parse method will convert JSON back to JS Object
+           console.log(JSON.parse(JSON.stringify(product))); 
+
+           const object = {
+                message:'Hello',
+                price: 799
+           };
+
+           // const message = object.message;
+           const{ message,price } = object; // this call descontruct
+           console.log(message);
+           console.log(price);
+
+           const object1 = {
+            message,
+            method (){
+                console.log('method');
+            }
+           };
+           object1.method();
+        </script>
+    </body>
+</html>
